@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横並び画像</title>
+    <style>
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-item {
+            width: 24%;
+            text-align: center;
+        }
+
+        .caption {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .image-item {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-gallery">
+    <div class="image-item">
+        <img src="img/a.svg" alt="画像1">
+        <p class="caption">テキスト1</p>
+    </div>
+    <div class="image-item">
+        <img src="img/b.svg" alt="画像2">
+        <p class="caption">テキスト2</p>
+    </div>
+    <div class="image-item">
+        <img src="img/c.svg" alt="画像3">
+        <p class="caption">テキスト3</p>
+    </div>
+    <div class="image-item">
+        <img src="img/d.svg" alt="画像4">
+        <p class="caption">テキスト4</p>
+    </div>
+</div>
+
+</body>
+</html>
